@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Reset default margin and padding */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set true black background */
+    body {
+      background-color: #000;
+    }
+
+    /* Center content vertically and horizontally */
+    body, html {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Set font color to the first color in the palette */
+    ::selection {
+      background-color: rgb(137, 60, 245);
+      color: #fff;
+    }
+
+    /* Add minimalistic text style */
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      font-family: monospace;
+      color: #fff;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 24px;
+      font-family: monospace;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+    }
+
+    /* Add search box style */
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .search-container input[type="text"] {
+      width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: monospace;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    .search-container input[type="submit"] {
+      margin-left: 10px;
+      padding: 10px;
+      background-image: url("https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png"); /* Replace with the actual URL of the search icon */
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: center;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Add clock style */
+    .clock {
+      margin-top: 20px;
+      font-size: 36px;
+      font-family: monospace;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Add search suggestions style */
+    .suggestions {
+      margin-top: 20px;
+      font-size: 18px;
+      font-family: monospace;
+      color: #fff;
+      text-align: center;
+    }
+
+    .suggestions ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .suggestions li {
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .suggestions a {
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Startpage content -->
+  <div class="search-container">
+    <h1>WATERFALL🌊</h1>
+    <form action="https://www.google.com/search" method="GET">
+      <input type="text" name="q" placeholder="Search the web...">
+      <input type="submit" value="">
+    </form>
+  </div>
+
+  <!-- Clock -->
+  <div class="clock">
+    <script>
+      function updateTime() {
+        var currentTime = new Date();
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var day = days[currentTime.getDay()];
+        var date = currentTime.getDate().toString().padStart(2, '0');
+        var month = (currentTime.getMonth() + 1).toString().padStart(2, '0');
+        var year = currentTime.getFullYear();
+        var hours = currentTime.getHours().toString().padStart(2, '0');
+        var minutes = currentTime.getMinutes().toString().padStart(2, '0');
+        var seconds = currentTime.getSeconds().toString().padStart(2, '0');
+        var timeString = day + ', ' + date + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+        document.getElementById("time").textContent = timeString;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+    Current Time: <span id="time"></span>
+  </div>
+
+  <!-- Search suggestions -->
+  <div class="suggestions">
+    <ul>
+      <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+      <li><a href="https://www.roblox.com/home">Roblox</a></li>
+      <li><a href="https://www.youtube.com">YouTube</a></li>
+      <li><a href="https://classroom.google.com">Classroom</a></li>
+    </ul>
+  </div>
+</body>
