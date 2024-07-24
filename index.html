@@ -1,123 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    /* Reset default margin and padding */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Set true black background */
-    body {
-      background-color: #fff;
-    }
-
-    /* Center content vertically and horizontally */
-    body, html {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Set font color to the first color in the palette */
-    ::selection {
-      background-color: rgb(137, 60, 245);
-      color: #fff;
-    }
-
-    /* Add minimalistic text style */
-    h1 {
-      font-size: 48px;
-      font-weight: bold;
-      font-family: monospace;
-      color: #000;
-      text-align: left;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-
-    p {
-      font-size: 24px;
-      font-family: monospace;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-    }
-
-    /* Add search box style */
-    .search-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .search-container input[type="text"] {
-      width: 400px;
-      padding: 10px;
-      font-size: 16px;
-      font-family: monospace;
-      border: none;
-      background-color: #333;
-      color: #fff;
-      border-radius: 4px;
-    }
-
-    .search-container input[type="submit"] {
-      margin-left: 10px;
-      padding: 10px;
-      background-image: url("https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png"); /* Replace with the actual URL of the search icon */
-      background-repeat: no-repeat;
-      background-size: 24px;
-      background-position: center;
-      border: none;
-      background-color: transparent;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    /* Add clock style */
-    .clock {
-      margin-top: 20px;
-      font-size: 36px;
-      font-family: monospace;
-      color: #fff;
-      text-align: center;
-    }
-
-    /* Add search suggestions style */
-    .suggestions {
-      margin-top: 20px;
-      font-size: 18px;
-      font-family: monospace;
-      color: #fff;
-      text-align: center;
-    }
-
-    .suggestions ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .suggestions li {
-      display: inline-block;
-      margin: 5px;
-    }
-
-    .suggestions a {
-      text-decoration: none;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Home Screen with Clock</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Startpage content -->
-  <div class="search-container">
-    <h1>Hello! How Are You?</h1>
-  </div>
+    <div class="container">
+        <h1 id="clock">00:00:00</h1>
+        <p>Choose your wallpaper color:</p>
+        <input type="color" id="colorPicker">
+        <div class="animated-box"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
